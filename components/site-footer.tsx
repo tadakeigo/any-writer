@@ -15,7 +15,7 @@ export function SiteFooter({ className }: React.HTMLAttributes<HTMLElement>) {
             rel="noreferrer"
             className="font-medium underline underline-offset-4"
           >
-            ShinCode
+            Keigo Tada
           </Link>
           . Hosted on {""}
           <Link
