@@ -31,7 +31,9 @@ export async function POST(req: NextRequest) {
       data: {
         title: body.title,
         content: body.content,
-        authorId: session.user.id,
+        author: {
+          connect: { id: session.user.id },
+        },
       },
       select: {
         id: true,
