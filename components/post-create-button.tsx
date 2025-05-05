@@ -53,7 +53,7 @@ export default function PostCreateButton({
 
     router.refresh();
 
-    router.push(`editor/${post.id}`);
+    router.push(`/editor/${post.id}`);
   }
 
   return (
