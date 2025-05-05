@@ -1,8 +1,28 @@
+import { Icons } from "@/components/icon";
+
 export type NavItem = {
     title: string;
     href: string;
     disabled?: boolean;
 };
+
+export type MainNavItem = NavItem;
+
+export type SidebarNavItem = {
+  title: string;
+  disabled?: boolean;
+  external?: boolean;
+  icon?: keyof typeof Icons;
+} & (
+  | {
+      href: string;
+      items?: never;
+    }
+  | {
+      href?: string;
+      items: NavItem[];
+    }
+);
 
 export type SiteConfig = {
     name: string;
@@ -18,3 +38,8 @@ export type SiteConfig = {
 export type MarketingConfig = {
     mainNav: NavItem[];
 }
+
+export type DashboardConfig = {
+    mainNav: MainNavItem[];
+    sidebarNav: SidebarNavItem[];
+  };
