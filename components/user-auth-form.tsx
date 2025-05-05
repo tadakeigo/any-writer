@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 import { Input } from "./ui/input";
 import { Label } from "./ui/label";
 import { buttonVariants } from "./ui/button";
-import { Icon } from "./icon";
+import { Icons } from "./icon";
 import { signIn } from "next-auth/react";
 import { useState } from "react";
 
@@ -43,7 +43,7 @@ export default function UserAuthForm() {
                         signIn('github');
                     }}         
                 >
-                    {isGithubLoding ? (<Icon.spinner />) : (<Icon.github className='mr-2'/>)}
+                    {isGithubLoding ? (<Icons.spinner />) : (<Icons.github className='mr-2'/>)}
                     Github
                 </button>
                 <button 
@@ -53,7 +53,7 @@ export default function UserAuthForm() {
                         signIn('google');
                     }}         
                 >
-                    {isGoogleLoding ? (<Icon.spinner />) : (<Icon.google className='mr-2'/>)}
+                    {isGoogleLoding ? (<Icons.spinner />) : (<Icons.google className='mr-2'/>)}
                     Google
                 </button>
             </div>
